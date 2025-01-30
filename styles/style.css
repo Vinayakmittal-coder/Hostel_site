@@ -1,0 +1,475 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #1A1A40, #000000);
+  color: #E0E0E0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Sections Styling */
+section {
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: #1E1E1E;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+section h2 {
+  color: #00FFFF;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.button, .whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00FFFF;
+  color: #000000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover, .whatsapp-button:hover {
+  background-color: #00CED1;
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.8);
+}
+
+.whatsapp-button img {
+  margin-right: 0.5rem;
+  height: 24px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 0.8rem;
+  border: 1px solid #333333;
+}
+
+table th {
+  background-color: #333333;
+  color: #00FFFF;
+}
+
+table td {
+  background-color: #1A1A40;
+  color: #E0E0E0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #1A1A40;
+  margin-top: 2rem;
+  color: #E0E0E0;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+footer .whatsapp-button {
+  margin-top: 1rem;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Minimal padding for a compact navbar */
+  background-color: #1A1A40;
+  position: fixed; /* Sticks the navbar to the top */
+  top: 0; /* Removes any gap above the navbar */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin: 0; /* Ensure no margin around the navbar */
+}
+
+
+/* Hostel Hub on the Left */
+.navbar .logo {
+  font-size: 1.8rem;
+  color: #00FFFF;
+}
+
+/* Hamburger Menu on the Right */
+.hamburger-menu {
+  font-size: 2rem;
+  color: #E0E0E0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Fullscreen Overlay Menu */
+.menu-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  display: flex; /* Show overlay when active */
+}
+
+/* Menu Links Box */
+.menu-links {
+  background-color: #1E1E1E;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.menu-links ul {
+  list-style: none;
+}
+
+.menu-links li {
+  margin: 1rem 0;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #00FFFF;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.menu-links a:hover {
+  color: #00CED1;
+}
+
+/* Ensure Overlay is Responsive */
+@media (max-width: 768px) {
+  .menu-links {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+main {
+  padding-top: 4rem; /* Adjust based on your navbar height */
+}
+
+/* Modal (Flashcard) Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: linear-gradient(to bottom, #1A1A40, #1E1E1E); /* Galaxy gradient */
+  padding: 2rem;
+  border-radius: 20px; /* Curved edges for flashcard */
+  color: #E0E0E0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #00FFFF; /* Neon cyan for headings */
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+}
+
+.modal-content a {
+  color: #00FFFF; /* Clickable links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.modal-content a:hover {
+  color: #00CED1; /* Hover effect */
+}
+
+/* Close Button */
+.modal-content button {
+  background-color: #00FFFF;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #00CED1;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Directory Section */
+.directory {
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: #1E1E1E;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.directory h2 {
+  color: #00FFFF;
+  margin-bottom: 1.5rem;
+}
+
+#search-bar {
+  width: 90%;
+  max-width: 500px;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: #2A2A50;
+  color: #E0E0E0;
+}
+
+#search-bar::placeholder {
+  color: #B0B0B0;
+}
+
+/* Grid Layout for Student Cards */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Student Card Design */
+.student-card {
+  background-color: #1A1A40;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  color: #E0E0E0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.student-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.8);
+}
+
+/* Modal (Flashcard) Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: linear-gradient(to bottom, #1A1A40, #1E1E1E); /* Galaxy gradient */
+  padding: 2rem;
+  border-radius: 20px; /* Curved edges for flashcard */
+  color: #E0E0E0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #00FFFF;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+}
+
+.modal-content a {
+  color: #00FFFF; /* Clickable links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.modal-content a:hover {
+  color: #00CED1; /* Hover effect */
+}
+
+.modal-content button {
+  background-color: #00FFFF;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #00CED1;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Grievance Section */
+.grievance-section {
+  padding: 2rem;
+  margin: 3rem auto;
+  background-color: #1E1E1E;
+  border-radius: 15px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.grievance-section h2 {
+  color: #00FFFF;
+  margin-bottom: 1rem;
+}
+
+/* Form Styling */
+.grievance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+
+/* Form Group (Labels and Inputs) */
+.form-group {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  color: #E0E0E0;
+  font-weight: bold;
+}
+
+/* Input Fields */
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: #ffffff; /* White input fields */
+  border: none;
+  border-radius: 15px; /* Curved edges */
+  color: #333;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  resize: none; /* Prevent resizing */
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #00FFFF;
+  color: #000000;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #00CED1;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.6);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .grievance-section {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
