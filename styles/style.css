@@ -466,6 +466,16 @@ textarea {
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.6);
 }
 
+/* 🚀 LinkedIn Icon Styling */
+.linkedin-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.linkedin-icon img:hover {
+  transform: scale(1.1);
+}
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .grievance-section {
