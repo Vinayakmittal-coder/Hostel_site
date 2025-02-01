@@ -1,53 +1,53 @@
-// Weekly Mess Menu with Snacks
+// Weekly Mess Menu
 const messMenu = {
   Monday: {
-    breakfast: "Idli & Sambar",
-    lunch: "Rice & Curry",
-    snacks: "Samosa with Chutney",
-    dinner: "Chapati & Sabzi"
+    breakfast: 'Aloo Paratha + Curd + Tea + Pickle + Bread Butter Jam',
+    lunch: 'Aloo Gobhi Sabji + Chana dal + Rice + Roti + Salad + Pickle',     
+    snacks: 'Pasta(One Time)/Paloda + Cold Coffee',
+    dinner: 'Dal + Soya Chap + Roti + Rice + Gajar Halwa'
   },
-  Tuesday: {
-    breakfast: "Pancakes",
-    lunch: "Pulao",
-    snacks: "Vegetable Sandwich",
-    dinner: "Roti & Dal"
+  Tuesday: {      
+  breakfast: 'Masala Dosa, Sambhar, Coconut Chutney + Tea + Milk', 
+  lunch: 'Kadhi Pakoda + Allo masala + Roti + Rice + Boiled Sprouts + Chana Salad',          
+  snacks: 'Veg Noodle(One Time) + Green Chutney + Tea',            
+  dinner: 'Matar Mushroom + Yellow Dal + Rice + Butter Roti + Kheer + Salad'
   },
   Wednesday: {
-    breakfast: "Paratha & Curd",
-    lunch: "Fried Rice",
-    snacks: "Masala Tea & Biscuits",
-    dinner: "Vegetable Curry & Roti"
+     breakfast:'Poha + Green Chutney + Tea + Milk + Butter Bread Jam',            
+     lunch: 'Allo Palak + Masoor dal + Rice + Roti + Salad + Raita Bhoodi + Pickle',            
+     snacks: 'Masala Maggi(One Time) + Coffee',            
+     dinner: 'Egg Curry / Paneer + Dal Fry + Rice +Roti + Gulab Jamun + Salad'
   },
-  Thursday: {
-    breakfast: "Dosa & Chutney",
-    lunch: "Biryani",
-    snacks: "Pakoras",
-    dinner: "Dal Tadka & Rice"
+  Thursday:{
+      breakfast: 'Mix / Onion Paratha + Curd + Tea + Pickle + Butter Bread Jam',
+      lunch: 'Aloo-Pattagobhi + Arhar dal + Rice + Roti + Salad + Pickle + Boondi Raita',            
+      snacks: 'Chilli Potato(One Time) + Tea',
+      dinner: 'Lal Masoor dal + Aloo Mater + Pulao + Roti + Jalebi + Salad'
   },
-  Friday: {
-    breakfast: "Poha & Jalebi",
-    lunch: "Rajma Chawal",
-    snacks: "Veg Patties",
-    dinner: "Paneer Butter Masala & Naan"
+  Friday:{            
+      breakfast: 'Moong dal Chilla / Boiled Egg + Tea + Milk + Butter Bread Jam',
+      lunch: 'Kala Chana + Seasonal Veg + Masoor dal + Rice + Roti + Salad Pickle + Boondi Raita',
+      snacks: 'Bread Roll(One Piece) + Green Chutney + Tea',
+      dinner: 'Sarso Ka Saag + Mix Dal + Makke ki Roti + Rice + Rasgulla + Salad'
   },
   Saturday: {
-    breakfast: "Upma",
-    lunch: "Khichdi",
-    snacks: "Cold Coffee",
-    dinner: "Chole Bhature"
+    breakfast:'Aloo Subji + Puri + Pickle + Tea + Milk + Bread Butter Jam',
+    lunch: 'Rajma + Jeera Rice + Baigan Bharta + Roti + Salad + Pickle + Boondi Raita',
+    snacks: 'Samosa(One Piece) + Green Chutney + Tea',
+    dinner: 'Kadhai Paneer / Egg Kadhai + Arhar dal + Rice + Roti + Salad + Fruits Custard'
   },
   Sunday: {
-    breakfast: "Aloo Puri",
-    lunch: "Veg Pulao",
-    snacks: "Cupcakes",
-    dinner: "Special Thali"
+    breakfast: 'Uttapam + Sambhar + Coconut Chutney + Tea + Milk + Bread Butter Jam',
+    lunch: 'Chhole Bhature + Raita + Pulav + Salad (Onion + Chilli)',
+    snacks:'Chhole Tikki (One Piece) + Green Chutney + Dahi + Tea',
+    dinner: 'Malai Kofta + Dal Makhani + Paratha + Ice-Cream + Salad'
   }
 };
 
 // Function to display today's mess menu on the homepage
 function displayTodaysFood() {
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const today = new Date().getDay(); // Get the current day as a number (0 = Sunday, 6 = Saturday)
+  const today = new Date().getDay();
   const todayName = days[today];
 
   const todayMenu = messMenu[todayName];
@@ -60,7 +60,6 @@ function displayTodaysFood() {
   }
 }
 
-// Function to generate the mess menu table on the mess menu page
 function generateMessMenuTable() {
   const tableBody = document.getElementById("mess-menu-body");
 
@@ -93,18 +92,15 @@ document.addEventListener("DOMContentLoaded", () => {
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const menuOverlay = document.getElementById("menu-overlay");
 
-// Open or close the menu when the hamburger icon is clicked
 hamburgerMenu.addEventListener("click", () => {
   menuOverlay.classList.toggle("active");
 });
-
-// Close the menu if the user clicks outside the links box
 menuOverlay.addEventListener("click", (event) => {
   if (event.target === menuOverlay) {
     menuOverlay.classList.remove("active");
   }
 });
-// Sample Student Data
+//Data
 const students = [
   { name: "Vinayak Mittal", room: "A113", class: "B.Tech 2nd Year",roll: "2024UCS1234", phone: "+911987654321", email: "jane.smith@example.com", hometown: "Mumbai" },
   { name: "Abhishek Mishra", room: "A101", class: "ECE 2",roll: "2024UCS1234", phone: "+911234567890", email: "john.doe@example.com", hometown: "New Delhi" }, 
@@ -145,7 +141,8 @@ function showFlashcard(index) {
     <div class="modal-content">
       <h2>${student.name}</h2>
       <p><strong>Room:</strong> ${student.room}</p>
-      <p><strong>Class:</strong> ${student.class}</p>
+      <p><strong>Branch:</strong> ${student.branch}</p>
+      <p><strong>Section:</strong> ${student.section}</p>
       <p><strong>Roll No:</strong> ${student.roll}</p>
       <p><strong>B.Tech 1st Year</strong></p>
       <p><strong>Phone:</strong> <a href="tel:${student.phone}">${student.phone}</a></p>
