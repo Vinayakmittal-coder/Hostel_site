@@ -1,4 +1,4 @@
-// Weekly Mess Menu
+// Weekly Mess Menu with Snacks
 const messMenu = {
   Monday: {
     breakfast: 'Aloo Paratha + Curd + Tea + Pickle + Bread Butter Jam',
@@ -47,7 +47,7 @@ const messMenu = {
 // Function to display today's mess menu on the homepage
 function displayTodaysFood() {
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const today = new Date().getDay();
+  const today = new Date().getDay(); // Get the current day as a number (0 = Sunday, 6 = Saturday)
   const todayName = days[today];
 
   const todayMenu = messMenu[todayName];
@@ -60,6 +60,7 @@ function displayTodaysFood() {
   }
 }
 
+// Function to generate the mess menu table on the mess menu page
 function generateMessMenuTable() {
   const tableBody = document.getElementById("mess-menu-body");
 
@@ -92,21 +93,25 @@ document.addEventListener("DOMContentLoaded", () => {
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const menuOverlay = document.getElementById("menu-overlay");
 
+// Open or close the menu when the hamburger icon is clicked
 hamburgerMenu.addEventListener("click", () => {
   menuOverlay.classList.toggle("active");
 });
+
+// Close the menu if the user clicks outside the links box
 menuOverlay.addEventListener("click", (event) => {
   if (event.target === menuOverlay) {
     menuOverlay.classList.remove("active");
   }
 });
-//Data
+// Sample Student Data
 const students = [
   { name: "Vinayak Mittal", room: "A113", class: "B.Tech 2nd Year",roll: "2024UCS1234", phone: "+911987654321", email: "jane.smith@example.com", hometown: "Mumbai" },
-  { name: "Abhishek Mishra", room: "A101", class: "ECE 2",roll: "2024UCS1234", phone: "+911234567890", email: "john.doe@example.com", hometown: "New Delhi" }, 
   { rollNumber: "2024UEV2802", name: "Anmol Tyagi", branch: "Environmental Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-102", phone: "7838022484", hometown: "To Be Updated" },
+  { name: "Rahul Kumar", room: "A103", class: "M.Tech Final Year",roll: "2024UCS12", phone: "+911122334455", email: "rahul.kumar@example.com", hometown: "Bangalore"},
     { rollNumber: "2024UIT3074", name: "Pratinav Pragy", branch: "Information Technology", section: "To Be Updated", email: "To Be Updated", room: "C-106", phone: "9580819700", hometown: "To Be Updated" },
-    { rollNumber: "2024UCS1672", name: "Manansh Arora", branch: "Computer Science and Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-201", phone: "8077877537", hometown: "To Be Updated" },
+  { name: "Rohan Sharma", room: "A104", class: "B.Sc 3rd Year",roll: "2024UCS123", phone: "+911234998877", email: "rohan.sharma@example.com", hometown: "Pune" },
+  { rollNumber: "2024UCS1672", name: "Manansh Arora", branch: "Computer Science and Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-201", phone: "8077877537", hometown: "To Be Updated" },
     { rollNumber: "2024UME4168", name: "Shashwat Shraiya", branch: "Mechanical Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-202", phone: "7061347640", hometown: "To Be Updated" },
     { rollNumber: "2024UME4211", name: "Divyansh Jain", branch: "Mechanical Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-302", phone: "9818463516", hometown: "To Be Updated" },
     { rollNumber: "2024UCD2132", name: "Garv Duhan", branch: "Design", section: "To Be Updated", email: "To Be Updated", room: "C-306", phone: "7082317772", hometown: "To Be Updated" },
@@ -123,9 +128,9 @@ const students = [
     { rollNumber: "2024UBT1058", name: "Varij Vatsal Verma", branch: "Biotechnology", section: "To Be Updated", email: "To Be Updated", room: "D-305", phone: "7355115612", hometown: "To Be Updated" },
     { rollNumber: "2024UEC2570", name: "Harsh Parwani", branch: "Electronics and Communication Engineering", section: "To Be Updated", email: "To Be Updated", room: "D-309", phone: "9079949815", hometown: "To Be Updated" },
     { rollNumber: "2024UCA1863", name: "Aman Yadav", branch: "Computer Applications", section: "To Be Updated", email: "To Be Updated", room: "D-312", phone: "9454096764", hometown: "To Be Updated" }
-];
+ ];
 
-// Function to Render Student Cards
+// Function to Render Student Cards 
 function renderStudentList(filter = "") {
   const studentList = document.getElementById("student-list");
   studentList.innerHTML = ""; // Clear existing content
@@ -138,18 +143,34 @@ function renderStudentList(filter = "") {
         student.room.toLowerCase().includes(searchText)
       );
     })
-    .forEach((student, index) => {
+    .forEach(student => {
       const card = document.createElement("div");
       card.className = "student-card";
-      card.dataset.index = index;
+      card.dataset.roll = student.roll; 
       card.innerText = `${student.name}\nRoom ${student.room}`;
       studentList.appendChild(card);
     });
 }
 
-// Function to Show Flashcard
-function showFlashcard(index) {
-  const student = students[index];
+// Attach Event Listeners
+document.addEventListener("DOMContentLoaded", () => {
+  renderStudentList();
+
+  document.getElementById("search-bar").addEventListener("input", e => renderStudentList(e.target.value));
+
+  document.getElementById("student-list").addEventListener("click", e => {
+    if (e.target.classList.contains("student-card")) {
+      const roll = e.target.dataset.roll;
+      showFlashcard(roll);
+    }
+  });
+});
+
+// Function to Show Flashcard 
+function showFlashcard(roll) {
+  const student = students.find(s => s.roll === roll); 
+  if (!student) return; // Prevent errors if no match is found
+
   const modal = document.createElement("div");
   modal.id = "student-modal";
   modal.className = "modal";
@@ -172,17 +193,3 @@ function showFlashcard(index) {
   modal.querySelector("#close-modal").addEventListener("click", () => modal.remove());
   document.body.appendChild(modal);
 }
-
-// Attach Event Listeners
-document.addEventListener("DOMContentLoaded", () => {
-  renderStudentList();
-
-  document.getElementById("search-bar").addEventListener("input", e => renderStudentList(e.target.value));
-
-  document.getElementById("student-list").addEventListener("click", e => {
-    if (e.target.classList.contains("student-card")) {
-      const index = e.target.dataset.index;
-      showFlashcard(index);
-    }
-  });
-});
