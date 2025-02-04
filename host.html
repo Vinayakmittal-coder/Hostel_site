@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Host Tournament</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Ramanujan Hostel Hub</h1>
+    <button class="hamburger-menu" id="hamburger-menu">☰</button>
+    <div class="menu-overlay" id="menu-overlay">
+      <nav class="menu-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mess-menu.html">Mess Menu</a></li>
+          <li><a href="directory.html">Student Directory</a></li>
+          <li><a href="notices.html">Notices</a></li>
+          <li><a href="hostel-rules.html">Hostel Rules</a></li>
+          <li><a href="lost-and-found.html">Lost & Found</a></li>
+          <li><a href="grievance-redressal.html">Grievance Redressal</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+          <li><a href="online-store.html">Online Store</a></li>
+          <li><a href="washing-machine.html">Washing Machine Schedule</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="grievance-section">
+    <a href="tournaments.html" class="button" style="background-color: white; color: black;">Back</a>
+      <h2>Host Tournament</h2>
+      <p>If you are ready to organize, please fill out the form below.</p>
+      <form class="grievance-form" action="https://formsubmit.co/vinayakmittal027@gmail.com" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Info:</label>
+          <input type="text" id="contact" placeholder="Your email or phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="grievance-type">Sports:</label>
+          <select id="grievance-type" required>
+            <option value="Football">Football</option>
+            <option value=Chess">Chess</option>
+            <option value="BGMI">BGMI</option>
+            <option value="TT">Table Tennis</option>
+            <option value="Badminton">Badminton</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Details:</label>
+          <textarea id="details" rows="5" placeholder="Describe your event in detail" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hostel Hub. All rights reserved.</p>
+    <p><strong>Developed by VINAYAK MITTAL {CSAI}</strong></p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
