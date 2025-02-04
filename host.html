@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <!-- Navbar -->
   <header class="navbar">
     <h1 class="logo">Ramanujan Hostel Hub</h1>
     <button class="hamburger-menu" id="hamburger-menu">☰</button>
@@ -29,26 +28,25 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main>
     <section class="grievance-section">
     <a href="tournaments.html" class="button" style="background-color: white; color: black;">Back</a>
       <h2>Host Tournament</h2>
       <p>If you are ready to organize, please fill out the form below.</p>
-      <form class="grievance-form" action="https://formsubmit.co/ed84abfbf4c3079f2b1ef1d641b3774e" method="POST">
+      <form class="grievance-form" action="https://formsubmit.co/vinayakmittal027@gmail.com" method="POST">
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Your full name" required>
+          <input name="name" type="text" id="name" placeholder="Your full name" required>
         </div>
 
         <div class="form-group">
           <label for="contact">Contact Info:</label>
-          <input type="text" id="contact" placeholder="Your email or phone number" required>
+          <input name="contac" type="text" id="contact" placeholder="Your email or phone number" required>
         </div>
 
         <div class="form-group">
-          <label for="grievance-type">Sports:</label>
-          <select id="grievance-type" required>
+          <label for="sports">Sports:</label>
+          <select name="sports" id="sports" required>
             <option value="Football">Football</option>
             <option value=Chess">Chess</option>
             <option value="BGMI">BGMI</option>
@@ -59,7 +57,7 @@
 
         <div class="form-group">
           <label for="details">Details:</label>
-          <textarea id="details" rows="5" placeholder="Describe your event in detail" required></textarea>
+          <textarea name="details" id="details" rows="5" placeholder="Describe your event in detail" required></textarea>
         </div>
 
         <button type="submit" class="submit-button">Submit</button>
@@ -67,7 +65,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Hostel Hub. All rights reserved.</p>
     <p><strong>Developed by VINAYAK MITTAL {CSAI}</strong></p>
