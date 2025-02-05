@@ -106,7 +106,7 @@ menuOverlay.addEventListener("click", (event) => {
 });
 // Sample Student Data
 const students = [
-    {name: "Vinayak Mittal", room: "A113", class: "Computer Science and Artificial Intelligence",roll: "2024UCA1564", phone: "+918826760409", email: "vinayakmittal027@gmail.com", hometown: "Faridabad" },
+    {name: "Vinayak Mittal", room: "A113", branch: "Computer Science and Artificial Intelligence",roll: "2024UCA1564", phone: "+918826760409", email: "vinayakmittal027@gmail.com", hometown: "Faridabad" },
     {roll: "2024UEV2802", name: "Anmol Tyagi", branch: "Electronics and Vehicle Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-102", phone: "7838022484", hometown: "To Be Updated" },
     {roll: "2024UIT3074", name: "Pratinav Pragy", branch: "Information Technology", section: "To Be Updated", email: "To Be Updated", room: "C-106", phone: "9580819700", hometown: "To Be Updated" },
     {name: "Rohan Sharma", room: "A104", class: "B.Sc 3rd Year",roll: "2024UCS123", phone: "+911234998877", email: "rohan.sharma@example.com", hometown: "Pune" },
