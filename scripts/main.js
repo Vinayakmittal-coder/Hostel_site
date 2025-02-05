@@ -109,7 +109,7 @@ const students = [
     {name: "Vinayak Mittal", room: "A-113", branch: "Computer Science and Artificial Intelligence",section:"2",roll: "2024UCA1564", phone: "+918826760409", email: "vinayakmittal027@gmail.com", hometown: "Faridabad" },
     {roll: "2024UEV2802", name: "Anmol Tyagi", branch: "Electronics and Vehicle Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-102", phone: "7838022484", hometown: "To Be Updated" },
     {roll: "2024UIT3074", name: "Pratinav Pragy", branch: "Information Technology", section: "To Be Updated", email: "To Be Updated", room: "C-106", phone: "9580819700", hometown: "To Be Updated" },
-    {name: "Aayush Kumar", room: "A-104", branch: "Computer Science and Artificial Intelligence",section:"1" roll: "2024UCA1855", phone: "+918076763274", email: "To Be Updated", hometown: "To Be Updated" },
+    {name: "Aayush Kumar", room: "A-104", branch: "Computer Science and Artificial Intelligence",section:"1", roll: "2024UCA1855", phone: "+918076763274", email: "To Be Updated", hometown: "To Be Updated" },
     {roll: "2024UCS1672", name: "Manansh Arora", branch: "Computer Science and Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-201", phone: "8077877537", hometown: "To Be Updated" },
     { roll: "2024UME4168", name: "Shashwat Shraiya", branch: "Mechanical Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-202", phone: "7061347640", hometown: "To Be Updated" },
     { roll: "2024UME4211", name: "Divyansh Jain", branch: "Mechanical Engineering", section: "To Be Updated", email: "To Be Updated", room: "C-302", phone: "9818463516", hometown: "To Be Updated" },
