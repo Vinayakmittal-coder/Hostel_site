@@ -192,3 +192,16 @@ function showFlashcard(roll) {
   modal.querySelector("#close-modal").addEventListener("click", () => modal.remove());
   document.body.appendChild(modal);
 }
+sessionStorage.setItem("lastPage", window.location.href);
+document.getElementById("back-btn").addEventListener("click", function () {
+    if (document.referrer) {
+        window.history.back(); // Normal back function
+    } else {
+        let lastPage = sessionStorage.getItem("lastPage");
+        if (lastPage) {
+            window.location.href = lastPage; // Use stored page
+        } else {
+            window.location.href = "index.html"; // Default to homepage
+        }
+    }
+});
